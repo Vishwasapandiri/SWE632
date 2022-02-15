@@ -1,0 +1,223 @@
+@font-face {
+    font-family: 'mikadolight';
+    src: url('fonts/mikado_light-webfont.woff2') format('woff2'),
+         url('fonts/mikado_light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+/* header */
+* {
+    box-sizing: border-box;
+}
+.page-header {
+    overflow: hidden;
+    background-color: #212121;
+    padding: 0px 10px 0px 10px;
+    color: #fff;
+}
+.page-header a {
+    float: left;
+    color: #fff;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 900;
+    line-height: 25px;
+    border-radius: 4px;
+}
+.header-content {
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1280px;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: auto;
+}
+.page-header a:hover {
+    color: rgba(255,255,255,.59);
+}
+.page-header a.active {
+    color: #212121;
+    background-color: white;
+}
+.page-header .header-right {
+    padding-top: 20px;
+    float: right;
+}
+.header-content img {
+    height: 65px;
+    min-width: 40px;
+    width: 100%;
+    float: left;
+}
+
+/* Body and main content */
+.main-image {
+    display: grid;
+    height: 100%;
+}
+.center {
+    max-width: 100%;
+    max-height: 100vh;
+    margin: auto;
+}
+
+body { 
+    font-family: "mikadolight",sans-serif !important; 
+    margin: 0 !important; 
+    display:flex; 
+    flex-direction:column; 
+    min-height:100vh;
+}
+.home_content {
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1280px;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: auto;
+    flex:1;
+    font-size: 18px;
+}
+.home_content .about-us {
+    position: relative;
+    padding: 30px 0;
+    margin-bottom: 30px;
+    clear: left;
+}
+.home_content .sec-title {
+    font-size: 36px;
+    text-align: center;
+    padding-bottom: 30px;
+    margin: 0;
+    font-weight: 300;
+    line-height: 1.1;
+}
+.about-us .desc {
+    text-align: center;
+}
+.about-us:after {
+    box-sizing: border-box;
+    content: "";
+    height: 2px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    background: linear-gradient(to right,#f8f8f8 0%,#d7d7d7 50%,#f8f8f8 100%);
+}
+.calc-cost .calc-image {
+    float: left;
+    padding: 0px 30px 60px 0px;
+}
+.btn {
+    float: left;
+    color: white;
+    background-color: #212121;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 900;
+    line-height: 25px;
+    border-radius: 4px;
+}
+
+/* Footer */
+footer { 
+    display: block;
+}
+.page-footer { 
+    padding-bottom: 0 !important; 
+    background-color: transparent !important; 
+    margin-top: auto; 
+}
+.footer.content {
+    background-color: #212121 !important;
+    overflow: hidden;
+    padding: 20px 0 0 !important;
+    margin-top: 0;
+}
+.footer.content .footer-inner, .main-container {
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+    max-width: 1100px;
+}
+.footer-cols {
+    float: left;
+    width: 25%;
+}
+.footer-cols h3 {
+    font-size: 15px;
+    font-weight: 900;
+    color: #fff;
+    padding-bottom: 7px;
+    text-transform: uppercase;
+}
+.footer.content ul {
+    margin: 0;
+    padding: 0;
+    list-style: none none;
+}
+.footer-cols ul li {
+    line-height: 27px;
+}
+.footer-cols ul li a {
+    color: rgba(255,255,255,.59);
+    text-decoration: none;
+}
+ul.contact-detail {
+    padding-top: 13px !important;
+}
+.footer.content .footer-cols .contact-detail li.mail-contact:before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 21px;
+    height: 19px;
+}
+.footer.content .footer-cols .contact-detail li.call-contact:before {
+    position: absolute;
+    left: 0;
+    top: 4px;
+    width: 21px;
+    height: 19px;
+}
+.footer.content .footer-cols .contact-detail li {
+    color: rgba(255,255,255,.64);
+    position: relative;
+    padding-left: 24px;
+    margin-bottom: 18px;
+}
+.footer-cols:last-child li a {
+    color: #fff;
+    font-size: 18px;
+}
+.footer.content .footer-cols .social-icon {
+    padding-top: 16px;
+}
+.footer.content .footer-cols .social-icon li {
+    float: left;
+    margin-right: 13px;
+}
+.footer .copyright {
+    padding: 16px 0 0;
+    clear: both;
+    color: #fff;
+    display: block;
+    text-align: center;
+    font-size: 14px !important;
+    background: 0 0;
+    margin: 20px 0 0
+}
+.footer .copyright span {
+    padding: 12px 0 13px;
+    display: block;
+    background-color: #151414 !important;
+}
+
+/* END: Header and Footer */

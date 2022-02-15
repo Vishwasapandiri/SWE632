@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">       
+        <title>Delivery 360</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="./owlcarousel/owl.carousel.min.js"></script>        
+        <script src="./js/script.js" type="text/javascript"></script>
+        <link rel="stylesheet" href="./css/styles.css">
+        <link rel="stylesheet" href="owlcarousel/owl.carousel.min.css">
+        <link rel="stylesheet" href="owlcarousel/owl.theme.default.min.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+        <script>
+            $(document).ready(function() {
+                $(".owl-carousel").owlCarousel({
+                    loop:true,
+                    items : 1,
+                    autoplay:true,
+                    autoplayTimeout:2000,
+                    autoplayHoverPause:true
+                });
+            });
+            $('.play').on('click',function(){
+                owl.trigger('play.owl.autoplay',[3000])
+            })
+            $('.stop').on('click',function(){
+                owl.trigger('stop.owl.autoplay')
+            })
+        </script>
+    </head>
+    <body>
+        <header class="page-header">
+            <div class="header-content">
+                <a href="main.html" style="padding-left: revert;"><img src="./img/logo.png" alt="Delivery 360"></a>
+                <div class="header-right">
+                    <a class="active" href="main.html">Home</a>
+                    <a href="">About Us</a>
+                    <a href="compute.html">Compute Cost</a>
+                </div>
+            </div>
+            
+        </header>
+        <div class="main_image">
+            <div class="owl-carousel owl-theme">
+                <!-- All Images Ref: https://www.shutterstock.com, https://www.google.com -->
+                <div class="item"><img class="center" src="./img/main_picture.jpg" style="height: 655px; min-height: 550px ;position: relative; background-size: cover;"></div>
+                <div class="item"><img class="center" src="./img/p1.jpg" style="height: 655px; min-height: 550px ;position: relative; background-size: cover;"></div>
+                <div class="item"><img class="center" src="./img/p2.jpg" style="height: 655px; min-height: 550px ;position: relative; background-size: cover;"></div>
+                <div class="item"><img class="center" src="./img/p3.jpg" style="height: 655px; min-height: 550px ;position: relative; background-size: cover;"></div>                
+            </div>            
+        </div>
+        <div class="home_content">
+            <div class="about-us">
+                <h2 class="sec-title">About Us</h2>
+                <div class="desc"> 
+                    Delivery 360 is an easy and automatic way to estimate your shipping cost and delivery times in consideration of your package dimensions.
+                    
+                    <p>Need to ship a package? want to know the shipping cost ? Delivery 360 will do the math for you. Use Delivery 360 to estimate your shipping costs according to the size of your package </p>
+                </div>
+            </div>
+            <div class="calc-cost">
+                <h2 class="sec-title">How to calculate shipping costs</h2>
+                <div class="calc-image">
+                    <img src="./img/calccost.png" style="height: 280px;">
+                </div>                
+                <div class="desc">
+                    <!-- Description Ref: https://www.parcelmonkey.com/shipping-calculator -->
+                    Shipping charges are calculated based on the distance your package needs to travel and the volumetric weight. The volumetric weight tells the courier how much space your parcel will occupy on a van or aircraft.                    
+                    <p>The good news is, you don’t need to know the volumetric weight of your parcel to get a shipping quote. Simply enter the length, width and height of your package into our shipping calculator and in seconds we’ll show you shipping quotes from multiple couriers. It's that easy!</p>
+                </div>
+                    <a class="btn" href="compute.html">Calculate Cost</a>
+                </div>
+            </div>
+        </div>
+        <footer class="page-footer">
+            <div class="footer content">
+                <div class="footer-inner">
+                    <div class="footer-cols">
+                        <h3>Company</h3>
+                        <ul>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-cols">
+                        <h3>What you can do</h3>
+                        <ul>
+                            <li><a href="#">Shipping Cost</a></li>
+                            <li><a href="#">Reviews</a></li>
+                            <li><a href="#">FAQs</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-cols">
+                        <h3>Help &amp; Support</h3>
+                        <ul>
+                            <li><a href="#">Terms &amp; conditions</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Cookie Policy</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-cols">
+                        <ul class="contact-detail">
+                            <li class="mail-contact fas fa-envelope"><a href="mailto:info@rapideli.com"><span style="font-family: 'mikadolight',sans-serif !important;">info@rapideli.com</span></a></li>
+                            <li class="call-contact fas fa-phone-alt"><a href="tel:+14443283284"><span style="font-family: 'mikadolight',sans-serif !important;">+1 (444)328-3284</span></a></li>
+                        </ul>
+                        <ul class="social-icon">
+                            <li class="tw">
+                                <a title="Twitter" href="https://twitter.com/" target="_blank">
+                                    <img src="./img/twitter.png" alt="Twitter">
+                                </a>
+                            </li>                            
+                            <li class="fb">
+                                <a title="Facebook" href="https://facebook.com/" target="_blank" >
+                                    <img src="./img/facebook.png" alt="Facebook">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+            </div> 
+            <small class="copyright"><span>All content © Delivery 360. All Rights Reserved.</span></small> 
+        </div>
+        </footer>
+    </body>
+</html>

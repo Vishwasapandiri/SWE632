@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">       
+        <title>Delivery 360</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="./owlcarousel/owl.carousel.min.js"></script>        
+        <script src="./js/script.js" type="text/javascript"></script>
+        <link rel="stylesheet" href="./css/styles.css">
+        <link rel="stylesheet" href="owlcarousel/owl.carousel.min.css">
+        <link rel="stylesheet" href="owlcarousel/owl.theme.default.min.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    </head>    
+    <body>
+        <header class="page-header">
+            <div class="header-content">
+                <a href="main.html" style="padding-left: revert;"><img src="./img/logo.png" alt="Delivery 360"></a>
+                <div class="header-right">
+                    <a class="active" href="main.html">Home</a>
+                    <a href="">About Us</a>
+                    <a href="compute.html">Compute Cost</a>
+                </div>
+            </div>
+            
+        </header>
+        <div class="home_content">
+            <p>Delivery 360 is started to provide shipping cost between one place to another place, of various delivery organizations. This is one stop place for customer to get all the information</p>
+
+            <div class="ship_form" style="display: inline-block;">
+                <form>
+                    <label for="from_loc">From</label>
+                    <input type="text" id="from_loc" name="from" placeholder="22030" value="" pattern="[0-9]{5}" required>
+                    <label for="to_loc">To</label>
+                    <input type="text" id="to_loc" name="to" placeholder="22031" value="" pattern="[0-9]{5}" required>
+                    <label for="date">Date you plan to ship</label>
+                    <input type="date" id="date" name="shipdate" placeholder="MM/DD/YYYY" required>
+                    <input type="submit" id="submit" value="Calculate" onclick="costFunc()">     
+                </form>
+            </div>
+            <div>
+                <label>Cost : </label><output id="price">$0</output>
+                <hr>
+                <label>Estimated Delivery : </label><output id="eta"></output>
+            </div>
+        </div>
+        <footer class="page-footer">
+            <div class="footer content">
+                <div class="footer-inner">
+                    <div class="footer-cols">
+                        <h3>Company</h3>
+                        <ul>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-cols">
+                        <h3>What you can do</h3>
+                        <ul>
+                            <li><a href="#">Shipping Cost</a></li>
+                            <li><a href="#">Reviews</a></li>
+                            <li><a href="#">FAQs</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-cols">
+                        <h3>Help &amp; Support</h3>
+                        <ul>
+                            <li><a href="#">Terms &amp; conditions</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Cookie Policy</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-cols">
+                        <ul class="contact-detail">
+                            <li class="mail-contact fas fa-envelope"><a href="mailto:info@delivery360.com"><span style="font-family: 'mikadolight',sans-serif !important;">info@rapideli.com</span></a></li>
+                            <li class="call-contact fas fa-phone-alt"><a href="tel:+14443283284"><span style="font-family: 'mikadolight',sans-serif !important;">+1 (444)328-3284</span></a></li>
+                        </ul>
+                        <ul class="social-icon">
+                            <li class="tw">
+                                <a title="Twitter" href="https://twitter.com/" target="_blank">
+                                    <img src="./img/twitter.png" alt="Twitter">
+                                </a>
+                            </li>                            
+                            <li class="fb">
+                                <a title="Facebook" href="https://facebook.com/" target="_blank" >
+                                    <img src="./img/facebook.png" alt="Facebook">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+            </div> 
+            <small class="copyright"><span>All content © Delivery 360. All Rights Reserved.</span></small> 
+        </div>
+        </footer>
+    </body>
+</html>
