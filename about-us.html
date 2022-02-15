@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">       
-        <title>Delivery 360 - Compute cost</title>
+        <title>Delivery 360 - About Us</title>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="./owlcarousel/owl.carousel.min.js"></script>        
         <script src="./js/script.js" type="text/javascript"></script>
@@ -19,72 +19,31 @@
                 <a href="index.html" style="padding-left: revert;"><img src="./img/logo.png" alt="Delivery 360"></a>
                 <div class="header-right">
                     <a href="index.html">Home</a>
-                    <a href="about-us.html">About Us</a>
-                    <a class="active" href="compute.html">Compute Cost</a>
+                    <a class="active" href="about-us.html">About Us</a>
+                    <a href="compute.html">Compute Cost</a>
                 </div>
             </div>
             
         </header>
         <div class="home_content">
-            <p>Delivery 360 is started to provide shipping cost between one place to another place, of various delivery organizations. This is one stop place for customer to get all the information</p>
+            <div class="about-us">
+                <h2 class="sec-title">About Us</h2>
+                <div class="desc" style="text-align: justify;"> 
+                    <!-- Description Ref: https://www.parcelmonkey.com/about-us -->
+                    Delivery 360 was a bedroom startup founded in the United States, back in 2010. Since then we have rapidly become a trusted, shipping service allowing consumers and businesses to ship to and from, anywhere in the United States. 
 
-            <div class="form_container">
-                <form method="post" onsubmit="costFunc()">
-                    <span class="require">* Required Fields</span>
-                    <div class="row">
-                        <div class="col-25">
-                            <label for="from_loc" class="required">From :</label>
-                        </div>
-                        <div class="col-35">
-                            <input type="text" id="from_loc" name="from" placeholder="22030" pattern="[0-9]{5}" value="" required>
-                            <span id="fromerrormsg" class="error"></span>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-25">
-                            <label for="to_loc" class="required">To :</label>
-                        </div>
-                        <div class="col-35">
-                            <input type="text" id="to_loc" name="to" placeholder="22031" pattern="[0-9]{5}" value="" required>  
-                            <span id="toerrormsg" class="error"></span>     
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-25">
-                            <label for="date" class="required">Date you plan to ship :</label>
-                        </div>
-                        <div class="col-35">
-                            <input type="date" id="date" name="shipdate" placeholder="MM/DD/YYYY" required>
-                            <span id="dateerrormsg" class="error"></span> 
-                        </div>
-                    </div>
-                    <div class="row">
-                        <input type="submit" id="submit" value="Calculate">
-                    </div>
-                </form>
+                    <p>Our shipping platform is really simple to use, we have made it easier than ever to find the best price to ship your items across the United States. We can help individuals, as well as small businesses, reach customers in throughout the United States using couriers. It doesn't matter if you have never shipped a package before, as we have the whole process covered and can show you how to ship a package for less, whilst ensuring it arrives safely. Our shipping calculator will help you compare and choose which courier service is best based on your needs, as there a number of factors to think about when thinking about what courier to book. </p>
+                    
+                    <p>Need to ship a package? want to know the shipping cost ? Delivery 360 will do the math for you. Use Delivery 360 to estimate your shipping costs according to the size of your package </p>
+                </div>                
             </div>
-            <br>
-            <table id="cost-tables" class="cost-table hide">
-                <thead>
-                    <tr>
-                        <th>Courier</th>
-                        <th>Estimated delivery date</th>
-                        <th>Cost</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>USPS - Priority Mail</td>
-                        <td id="uspsprioritycost"></td>
-                        <td id="uspspriorityeta"></td>
-                    </tr>
-                    <tr>
-                        <td>USPS - Priority Mail Express</td>
-                        <td id="uspspriorityexpresscost"></td>
-                        <td id="uspspriorityexpresseta"></td>
-                    </tr>
-                </tbody>
-            </table>
+            <div class="about-us">
+                <h2 class="sec-title">What couriers can I book?</h2>
+                <div class="desc" style="text-align: justify;"> 
+                    <!-- Description Ref: https://www.parcelmonkey.com/about-us -->
+                    We have a wide variety of delivery agents, postal operators and couriers in place for you to select from. DHL, USPS, UPS are just a few of the delivery companies you can choose from. We also have our branded hybrid services including International Drop Off operated by FedEx and you can also choose to have packages collected from a home or work address, or if you prefer to select a drop off service.  
+                </div>
+            </div>
         </div>
         <footer class="page-footer">
             <div class="footer content">

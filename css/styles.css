@@ -6,6 +6,9 @@
     font-style: normal;
 
 }
+html {
+  scroll-behavior: smooth;
+}
 /* header */
 * {
     box-sizing: border-box;
@@ -109,6 +112,21 @@ body {
     bottom: 0;
     background: linear-gradient(to right,#f8f8f8 0%,#d7d7d7 50%,#f8f8f8 100%);
 }
+.home_content .privacy {
+    position: relative;
+    padding: 30px 0;
+    margin-bottom: 30px;
+    clear: left;
+}
+.privacy:after {
+    box-sizing: border-box;
+    content: "";
+    height: 2px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    background: linear-gradient(to right,#f8f8f8 0%,#d7d7d7 50%,#f8f8f8 100%);
+}
 .calc-cost .calc-image {
     float: left;
     padding: 0px 30px 60px 0px;
@@ -124,6 +142,89 @@ body {
     font-weight: 900;
     line-height: 25px;
     border-radius: 4px;
+}
+input[type=text],input[type=date] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+} 
+label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+}  
+input[type=submit] {
+    background-color: #212121;
+    font-family: "mikadolight",sans-serif !important;
+    color: white;
+    padding: 12px 20px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 18px;
+    font-weight: 900;
+    cursor: pointer;
+    float: right;
+} 
+input[type=submit]:hover {
+    background-color: #232423;
+}
+.required:after { 
+    content:" *"; color: red; 
+} 
+.require { 
+    color: red; 
+    font-size: 12px;
+}
+.form_container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+} 
+.col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+} 
+.col-35 {
+    float: left;
+    width: 35%;
+    margin-top: 6px;
+}
+.error {
+    color: red;
+    padding: 2px;
+}
+  
+  /* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.home_content .hide {
+    display: none;
+}
+
+.cost-table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 50px;
+}
+
+.cost-table td, .cost-table th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.cost-table tr:hover {background-color: ##f2f2f2;}
+
+.cost-table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #212121;
+  color: white;
 }
 
 /* Footer */
