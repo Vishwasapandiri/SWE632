@@ -243,10 +243,9 @@
             </table>
         </div>
         <div>
-              <form method="post">
+              <form onsubmit="sendEmail(); reset(); return false;">
                   <input type="email" id="email" placeholder="Email" required>
-                <input type="button" value="Send Email" 
-                    onclick="sendEmail()" />
+                  <button type="submit">Send</button> 
               </form>
         </div>
         <footer class="page-footer">
