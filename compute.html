@@ -9,7 +9,7 @@
         <script src="./owlcarousel/owl.carousel.min.js"></script>        
         <script src="./js/script.js" type="text/javascript"></script>
         <script src="./js/stateAbbreviations.js"></script>
-        <script src="https://smtpjs.com/v3/smtp.js"></script>
+        
         <link rel="icon" type="image/x-icon" href="./img/favicon.ico">
         <link rel="stylesheet" href="./css/styles.css">
         <link rel="stylesheet" href="owlcarousel/owl.carousel.min.css">
@@ -77,21 +77,7 @@
                 });
                 });                                
             });
-                function sendEmail() {
-                    
-                  Email.send({
-                    Host: "smtp.gmail.com",
-                    Username: "swaroopsv96@gmail.com",
-                    Password: "JyothiSwaroop",
-                    To: 'jsurapar@gmu.edu',
-                    From: "swaroopsv96@gmail.com",
-                    Subject: "Sending Email using javascript",
-                    Body: "Well that was easy!!",
-                  })
-                    .then(
-                      message->alert("mail sent successfully")
-                    };
-                }
+
         </script>
     </head>    
     <body>
@@ -258,6 +244,7 @@
         </div>
         <div>
               <form method="post">
+                  <input type="email" id="email" placeholder="Email" required>
                 <input type="button" value="Send Email" 
                     onclick="sendEmail()" />
               </form>
@@ -310,5 +297,23 @@
             <small class="copyright"><span>All content © Delivery 360. All Rights Reserved.</span></small> 
         </div>
         </footer>
+        <script src="https://smtpjs.com/v3/smtp.js"></script>
+        <script>
+            function sendEmail() {
+                    
+                  Email.send({
+                    Host: "smtp.gmail.com",
+                    Username: "swaroopsv96@gmail.com",
+                    Password: "JyothiSwaroop",
+                    To: 'jsurapar@gmu.edu',
+                    From: document.getElementById("email").value,
+                    Subject: "Sending Email using javascript",
+                    Body: "Well that was easy!!",
+                  })
+                    .then(
+                      message->alert("mail sent successfully")
+                    };
+                }
+        </script>
     </body>
 </html>
