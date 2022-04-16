@@ -9,6 +9,7 @@
         <script src="./owlcarousel/owl.carousel.min.js"></script>        
         <script src="./js/script.js" type="text/javascript"></script>
         <script src="./js/stateAbbreviations.js"></script>
+        <script src="https://smtpjs.com/v3/smtp.js"></script>
         <link rel="icon" type="image/x-icon" href="./img/favicon.ico">
         <link rel="stylesheet" href="./css/styles.css">
         <link rel="stylesheet" href="owlcarousel/owl.carousel.min.css">
@@ -76,6 +77,21 @@
                 });
                 });                                
             });
+                function sendEmail() {
+                    
+                  Email.send({
+                    Host: "smtp.gmail.com",
+                    Username: "sender@email_address.com",
+                    Password: "Enter your password",
+                    To: 'receiver@email_address.com',
+                    From: "sender@email_address.com",
+                    Subject: "Sending Email using javascript",
+                    Body: "Well that was easy!!",
+                  })
+                    .then(function (message) {
+                      alert("mail sent successfully")
+                    });
+                }
         </script>
     </head>    
     <body>
@@ -239,6 +255,12 @@
                     </tr>
                 </tbody>
             </table>
+        </div>
+        <div>
+              <form method="post">
+                <input type="button" value="Send Email" 
+                    onclick="sendEmail()" />
+              </form>
         </div>
         <footer class="page-footer">
             <div class="footer content">
