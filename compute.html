@@ -8,6 +8,29 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="./owlcarousel/owl.carousel.min.js"></script>        
         <script src="./js/script.js" type="text/javascript"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+           <script type="text/javascript">
+        (function() {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init('0-kgE9wDWr-DY3t8t');
+        })();
+        </script>
+        <script type="text/javascript">
+            window.onload = function() {
+                document.getElementById('contact-form').addEventListener('submit', function(event) {
+                    event.preventDefault();
+                    // generate a five digit number for the contact_number variable
+                    this.contact_number.value = Math.random() * 100000 | 0;
+                    // these IDs from the previous steps
+                    emailjs.sendForm('contact_service', 'contact_form', this)
+                        .then(function() {
+                            console.log('SUCCESS!');
+                        }, function(error) {
+                            console.log('FAILED...', error);
+                        });
+                });
+            }
+        </script>
         <script src="./js/stateAbbreviations.js"></script>
         <link rel="icon" type="image/x-icon" href="./img/favicon.ico">
         <link rel="stylesheet" href="./css/styles.css">
@@ -15,6 +38,19 @@
         <link rel="stylesheet" href="owlcarousel/owl.theme.default.min.css">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
         <script>
+            
+              var templateParams = {
+                    name: 'Swaroop',
+                    notes: 'Check this out!'
+                };
+
+                emailjs.send('service_2ggjlyk', 'template_xxv9aue', templateParams)
+                    .then(function(response) {
+                       console.log('SUCCESS!', response.status, response.text);
+                    }, function(error) {
+                       console.log('FAILED...', error);
+                    });
+            
             function formatString(str) {
               return str.replace(/(\B)[^ ]*/g, match => (match.toLowerCase())).replace(/^[^ ]/g, match => (match.toUpperCase()));
             }
@@ -239,6 +275,18 @@
                     </tr>
                 </tbody>
             </table>
+        </div>
+        <div>
+                <form id="contact-form">
+                    <input type="hidden" name="contact_number">
+                    <label>Name</label>
+                    <input type="text" name="user_name">
+                    <label>Email</label>
+                    <input type="email" name="user_email">
+                    <label>Message</label>
+                    <textarea name="message"></textarea>
+                    <input type="submit" value="Send">
+                </form>
         </div>
         <footer class="page-footer">
             <div class="footer content">
