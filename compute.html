@@ -9,7 +9,6 @@
         <script src="./owlcarousel/owl.carousel.min.js"></script>        
         <script src="./js/script.js" type="text/javascript"></script>
         <script src="./js/stateAbbreviations.js"></script>
-        
         <link rel="icon" type="image/x-icon" href="./img/favicon.ico">
         <link rel="stylesheet" href="./css/styles.css">
         <link rel="stylesheet" href="owlcarousel/owl.carousel.min.css">
@@ -77,7 +76,6 @@
                 });
                 });                                
             });
-
         </script>
     </head>    
     <body>
@@ -242,18 +240,6 @@
                 </tbody>
             </table>
         </div>
-        <div>
-                   <form id="contact-form">
-                    <input type="hidden" name="contact_number">
-                    <label>Name</label>
-                    <input type="text" name="user_name">
-                    <label>Email</label>
-                    <input type="email" name="user_email">
-                    <label>Message</label>
-                    <textarea name="message"></textarea>
-                    <input type="submit" value="Send">
-                </form
-        </div>
         <footer class="page-footer">
             <div class="footer content">
                 <div class="footer-inner">
@@ -302,29 +288,5 @@
             <small class="copyright"><span>All content © Delivery 360. All Rights Reserved.</span></small> 
         </div>
         </footer>
-        <script src="https://smtpjs.com/v3/smtp.js"></script>
-            <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-    <script type="text/javascript">
-        (function() {
-            // https://dashboard.emailjs.com/admin/account
-            emailjs.init('YOUR_PUBLIC_KEY');
-        })();
-    </script>
-   <script type="text/javascript">
-        window.onload = function() {
-            document.getElementById('contact-form').addEventListener('submit', function(event) {
-                event.preventDefault();
-                // generate a five digit number for the contact_number variable
-                this.contact_number.value = Math.random() * 100000 | 0;
-                // these IDs from the previous steps
-                emailjs.sendForm('contact_service', 'contact_form', this)
-                    .then(function() {
-                        console.log('SUCCESS!');
-                    }, function(error) {
-                        console.log('FAILED...', error);
-                    });
-            });
-        }
-    </script>
     </body>
 </html>
