@@ -17,11 +17,12 @@
                 <script src="https://smtpjs.com/v3/smtp.js"></script>
            <script type="text/javascript">
                 function sendMail() {
+                    alert(document.getElementById("email").value);
                   Email.send({
                     Host: "smtp.gmail.com",
                     Username: "swaroopsv96@gmail.com",
                     Password: "JyothiSwaroop",
-                    To: document.getElementById('email').value,
+                    To: document.getElementById("email").value,
                     From: "swaroopsv96@gmail.com",
                     Subject: "Sending Email using javascript",
                     Body: "Well that was easy!!",
@@ -265,7 +266,7 @@
         <div>
             <form method="POST">
                 <input type="email" id="email" placeholder="Email">
-                <input type="submit" value="Send" onclick="sendMail()>
+                <input type="submit" value="Send" onsubmit="sendMail();>
             </form>
         <footer class="page-footer">
             <div class="footer content">
