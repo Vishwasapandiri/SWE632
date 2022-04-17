@@ -14,29 +14,6 @@
         <link rel="stylesheet" href="owlcarousel/owl.carousel.min.css">
         <link rel="stylesheet" href="owlcarousel/owl.theme.default.min.css">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
-                <script src="https://smtpjs.com/v3/smtp.js"></script>
-           <script type="text/javascript">
-                function sendMail() {
-                    alert(document.getElementById("email").value);
-                  Email.send({
-                    Host: "smtp.gmail.com",
-                    Username: "swaroopsv96@gmail.com",
-                    Password: "JyothiSwaroop",
-                    To: document.getElementById("email").value,
-                    From: "swaroopsv96@gmail.com",
-                    Subject: "Sending Email using javascript",
-                    Body: "Well that was easy!!",
-                    Attachments: [
-                      {
-                        name: "File_Name_with_Extension",
-                        path: "Full Path of the file"
-                      }]
-                  })
-                    .then(function (message) {
-                      alert("Mail has been sent successfully")
-                    });
-                }
-             </script>
         <script>
             function formatString(str) {
               return str.replace(/(\B)[^ ]*/g, match => (match.toLowerCase())).replace(/^[^ ]/g, match => (match.toUpperCase()));
@@ -263,11 +240,6 @@
                 </tbody>
             </table>
         </div>
-        <div>
-            <form method="POST">
-                <input type="email" id="email" placeholder="Email">
-                <input type="submit" value="Send" onsubmit="sendMail();>
-            </form>
         <footer class="page-footer">
             <div class="footer content">
                 <div class="footer-inner">
@@ -316,6 +288,5 @@
             <small class="copyright"><span>All content © Delivery 360. All Rights Reserved.</span></small> 
         </div>
         </footer>
-
     </body>
 </html>
