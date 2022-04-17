@@ -16,7 +16,7 @@
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
                 <script src="https://smtpjs.com/v3/smtp.js"></script>
            <script type="text/javascript">
-                function sendEmail() {
+                function sendMail() {
                   Email.send({
                     Host: "smtp.gmail.com",
                     Username: "swaroopsv96@gmail.com",
@@ -265,7 +265,7 @@
         <div>
             <form method="POST">
                 <input type="email" id="email" placeholder="Email">
-                <input type="submit" value="Send">
+                <input type="submit" value="Send" onclick="sendMail()>
             </form>
         <footer class="page-footer">
             <div class="footer content">
