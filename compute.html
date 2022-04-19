@@ -76,6 +76,9 @@
                 });
                 });                                
             });
+            function enable(){
+                document.getElementById("email").style.display = "block";
+            }
         </script>
     </head>    
     <body>
@@ -199,7 +202,7 @@
                     </div>
                     
                     <div class="row">
-                        <input type="submit" id="submit" value="Calculate">
+                        <input type="submit" id="submit" value="Calculate" onclick="enable()">
                     </div>
                 </form>
             </div>
