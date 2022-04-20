@@ -76,6 +76,9 @@
                 });
                 });                                
             });
+            function enable(){
+                document.getElementById("email_form").style.display = "block";
+            }
             function sendEmail(){
                 alert("Email Sent");
                 var tableData = $('#cost-tables').html();   
@@ -211,7 +214,7 @@
                     </div>
                     
                     <div class="row">
-                        <input type="submit" id="submit" value="Calculate">
+                        <input type="submit" id="submit" value="Calculate" onclick="enable()">
                     </div>
                 </form>
             </div>
@@ -258,7 +261,7 @@
                 </tbody>
             </table>
         <div>
-            <form method="POST" id="email_form" class="form_container hide">
+            <form method="POST" id="email_form" style="display:none;" class="form_container">
                 <div class="row">
                     <div class="col-25">
                         <label for="email">Email the quote:</label>
