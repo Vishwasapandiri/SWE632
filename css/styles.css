@@ -199,6 +199,12 @@ input[type=text],input[type=date],input[type=number],input[type=email] {
     border-radius: 4px;
     resize: vertical;
 } 
+select {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
 label {
     padding: 12px 12px 12px 0;
     display: inline-block;
