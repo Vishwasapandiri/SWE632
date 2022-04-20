@@ -79,6 +79,17 @@
             function enable(){
                 document.getElementById("email_form").style.display = "block";
             }
+            function sendEmail(){
+                var tableData = $('#cost-tables').html();   
+                const sendData = {
+                    tData:tableData,
+                    mailId:document.getElementById("email").value;
+                }         
+                var data = JSON.stringify(sendData);                
+                $.post("https://nodejs-email-service.herokuapp.com/subscribe/", sendData, function(data,status){
+                    alert(data);
+                });
+            }
         </script>
     </head>    
     <body>
