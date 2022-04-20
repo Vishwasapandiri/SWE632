@@ -192,7 +192,7 @@ body {
     line-height: 25px;
     border-radius: 4px;
 }
-input[type=text],input[type=date],input[type=number] {
+input[type=text],input[type=date],input[type=number],input[type=email] {
     width: 100%;
     padding: 12px;
     border: 1px solid #ccc;
@@ -203,7 +203,7 @@ label {
     padding: 12px 12px 12px 0;
     display: inline-block;
 }  
-input[type=submit] {
+input[type=submit],input[type=button] {
     background-color: #212121;
     font-family: "mikadolight",sans-serif !important;
     color: white;
@@ -216,6 +216,9 @@ input[type=submit] {
     float: right;
 } 
 input[type=submit]:hover {
+    background-color: #232423;
+}
+input[type=button]:hover {
     background-color: #232423;
 }
 input[type="submit"]:disabled {
