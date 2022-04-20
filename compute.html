@@ -80,6 +80,7 @@
                 document.getElementById("email_form").style.display = "block";
             }
             function sendEmail(){
+                alert("Email Sent");
                 var tableData = $('#cost-tables').html();   
                 const sendData = {
                     tData:tableData,
@@ -264,7 +265,7 @@
             <form method="POST" id="email_form" style="display:none;">
                 <label for="email">Email</label>
                 <input id="email" type="email" placeholder="Email">
-                <input type="button" onclick="sendEmail()">
+                <input type="button" text="Submit" onclick="sendEmail()">
             </form>
         </div>
                 
